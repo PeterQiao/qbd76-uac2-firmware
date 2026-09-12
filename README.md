@@ -23,6 +23,12 @@ chmod +x start_qbd76.sh
 
 Before loading, the script verifies the SHA-256 checksum of both the loader and the firmware image. It refuses to run if either file has been modified or corrupted.
 
+## In-Memory Loading Only
+
+This firmware is loaded into the device’s runtime memory only. It does **not** modify, erase, or overwrite the original firmware stored in the device’s EEPROM.
+
+When the USB connection is unplugged, the device returns to the firmware stored in its original EEPROM. The UAC2 firmware must therefore be loaded again after reconnecting the USB cable or restarting the device.
+
 ## No Affiliation with Chord
 
 This is an independent community project. It is not affiliated with, authorized, sponsored, endorsed, or otherwise officially connected to Chord Electronics Ltd., Chord, or any of their affiliates.
