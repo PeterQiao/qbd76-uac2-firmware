@@ -6,7 +6,9 @@ This repository contains files for loading QBD76 UAC2 firmware on macOS (Apple S
 - `verified_uac2_release_cb3dbc61.bix` — QBD76 UAC2 firmware image
 - `ram_loader` — macOS arm64 RAM loader
 
-> **Warning: Use at your own risk.** You are solely responsible for any consequences of using these files. The author assumes no responsibility or liability for damage to your device, firmware, computer, data, or any other property. This project has currently been tested only on the author’s own QBD76 HDSD.
+<h2><strong>⚠️ Warning: Use at your own risk</strong></h2>
+
+<p><strong>You are solely responsible for any consequences of using these files. The author assumes no responsibility or liability for damage to your device, firmware, computer, data, or any other property. This project has currently been tested only on the author’s own QBD76 HDSD.</strong></p>
 
 ## Usage
 
