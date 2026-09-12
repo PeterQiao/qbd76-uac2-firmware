@@ -1,41 +1,40 @@
 # QBD76 UAC2 Firmware Loader
 
-本仓库提供用于在 macOS（Apple Silicon）上加载 QBD76 UAC2 固件的文件：
+This repository contains files for loading QBD76 UAC2 firmware on macOS (Apple Silicon):
 
-- `start_qbd76.sh`：校验文件 SHA-256 后启动加载流程的脚本
-- `verified_uac2_release_cb3dbc61.bix`：QBD76 UAC2 固件文件
-- `ram_loader`：macOS arm64 RAM 加载器
+- `start_qbd76.sh` — verifies the SHA-256 checksums and starts the loading process
+- `verified_uac2_release_cb3dbc61.bix` — QBD76 UAC2 firmware image
+- `ram_loader` — macOS arm64 RAM loader
 
-## 使用
+## Usage
 
-先安装 Homebrew 的 libusb：
+Install the Homebrew `libusb` dependency:
 
 ```sh
 brew install libusb
 ```
 
-将设备连接到 Mac 后，在本目录执行：
+Connect the device to your Mac, then run the following from this directory:
 
 ```sh
 chmod +x start_qbd76.sh
 ./start_qbd76.sh
 ```
 
-脚本会在执行加载前校验加载器和固件的 SHA-256；文件被修改或损坏时会拒绝运行。
+Before loading, the script verifies the SHA-256 checksum of both the loader and the firmware image. It refuses to run if either file has been modified or corrupted.
 
-## 与 Chord 的关系
+## No Affiliation with Chord
 
-本项目是独立的社区工具，与 Chord Electronics Ltd.、Chord 及其关联公司不存在隶属、授权、赞助、代言或其他官方关系。
+This is an independent community project. It is not affiliated with, authorized, sponsored, endorsed, or otherwise officially connected to Chord Electronics Ltd., Chord, or any of their affiliates.
 
-“Chord”“QBD76”及其他相关名称和标识属于其各自权利人。本仓库仅在必要范围内使用这些名称来说明兼容的设备和用途，不代表任何商标授权或官方支持。
+“Chord,” “QBD76,” and other related names and marks belong to their respective owners. They are used in this repository only where necessary to identify device compatibility and intended use. Nothing in this repository should be interpreted as a trademark license or official support.
 
 ## License
 
-本仓库中由本项目作者原创的脚本、README 及其他文档内容采用 [MIT License](LICENSE) 发布。
+The original scripts, README, and other documentation created for this project are released under the [MIT License](LICENSE).
 
-固件文件 `verified_uac2_release_cb3dbc61.bix` 与二进制文件 `ram_loader` 的版权、专利、商标及其他权利可能属于原始权利人；除非另有明确书面授权，本仓库不对这些文件授予超出法律允许范围的许可。相关文件按“现状”提供，使用者应自行确认其使用权并承担合规责任。
+The copyright, patent, trademark, and other rights to `verified_uac2_release_cb3dbc61.bix` and `ram_loader` may belong to their original rights holders. Unless expressly authorized in writing, this repository does not grant any license to those files beyond what is permitted by applicable law. They are provided “as is,” and users are responsible for confirming that their use is lawful and properly authorized.
 
-## 版权或侵权联系
+## Copyright or Infringement Notices
 
-如果你认为本仓库中的任何内容侵犯了你的版权、商标权或其他合法权益，请通过本仓库的 GitHub Issues 联系，说明相关文件、权利依据和联系方式。我们会及时核实；经确认后，将删除或按要求处理相关内容。
-
+If you believe that any content in this repository infringes your copyright, trademark, or other legal rights, please contact us through the repository’s GitHub Issues. Include the relevant file, the basis for your claim, and your contact information. We will review the matter promptly and, where appropriate, remove or otherwise address the content.
